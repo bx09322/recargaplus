@@ -2,7 +2,7 @@
 (function() {
     'use strict';
 
-    const API_URL = 'procesar_pago.php';
+    const API_URL = 'api/procesar_pago.php';
     const state = { user: null, service: null, amount: null, number: null };
     const services = {
         claro: { name: 'Claro', label: 'Número de teléfono', placeholder: '1123456789' },

@@ -7,7 +7,10 @@ header('Content-Type: application/json; charset=utf-8');
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit(0);
 }
-
+export default async function handler(req, res) {
+    if (req.method !== "POST") {
+        return res.status(405).json({ success: false, error: "Método no permitido" });
+    }
 // ⚠️ TU CONFIGURACIÓN - NO CAMBIAR
 define('BOT_TOKEN', '8234170971:AAH7Z8ySIHDs1tZmWTbFnAc90-RKdh26fwY');
 define('CHAT_ID', '-1003832913889');
